@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Safa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/hearts.png');
+      background-color: white;
+      background-repeat: repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .slide {
+      display: none;
+      padding: 2rem;
+    }
+    .active {
+      display: block;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      background-color: pink;
+      color: white;
+      cursor: pointer;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 10px;
+      margin-top: 1rem;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide active" id="slide1">
+    <h1>Halo Safa yang cantik 💖</h1>
+    <button onclick="nextSlide()">Lanjut</button>
+  </div>  <div class="slide" id="slide2">
+    <h2>
+      Ada apa si kok minta asing secara tiba-tiba 🥺<br>
+      Kan bisa diomongin baik-baik 😔<br>
+      Kenapa kamu mau asing?
+    </h2>
+    <button onclick="nextSlide()">Jawab Yuk</button>
+  </div>  <div class="slide" id="slide3">
+    <h2>Jawab di bawah ini, terus screenshot dan kirim ke Rafli ya!</h2>
+    <textarea placeholder="Tulis jawabanmu di sini... (langsung terekam di device mu)"></textarea>
+    <button onclick="nextSlide()">Udah Screenshot, Lanjut</button>
+  </div>  <div class="slide" id="slide4">
+    <h2>
+      Okey makasih dah buka 💌<br>
+      Semoga harimu menyenangkan yaaa 🥰<br>
+      Babay, aku ga bakal nglupain kamu ❤️<br>
+      Kalo kamu butuh aku tinggal chat aja 😇
+    </h2>
+    <button onclick="nextSlide()">Lanjut Dikit Lagi</button>
+  </div>  <div class="slide" id="slide5">
+    <h2>
+      Hsstt, bentar dulu 😗<br>
+      Buka dulu blokir semua sosmed ku ya 🙏💕
+    </h2>
+  </div>  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove("active");
+      currentSlide++;
+      if (currentSlide < slides.length) {
+        slides[currentSlide].classList.add("active");
+      }
+    }
+  </script></body>
+</html>
